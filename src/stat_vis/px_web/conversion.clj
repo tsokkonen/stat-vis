@@ -7,7 +7,7 @@
 (def query "{
              \"Query\": [
                        {
-                        \"code\": \"Nelj‰nnes\",
+                        \"code\": \"Nelj√§nnes\",
                         \"selection\": {
                                       \"filter\": \"item\",
                                       \"values\": [
