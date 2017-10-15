@@ -1,7 +1,6 @@
 (ns stat-vis.core
   (:require [clj-http.client :as client]
             [clojure.java.browse :as browse]
-            [clojure.string :as s]
             [ring.adapter.jetty :as r]
             [stat-vis.px-web.conversion :refer :all]
             [stat-vis.line-chart.svg :refer :all])
