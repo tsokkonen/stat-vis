@@ -57,8 +57,6 @@
                           }
              }")
 
-
-
 (def tbl-keys [:year :quarter :home-type :number-of-rooms
                :postal-code :data-item :sum-item :price-per-square-meter])
 
@@ -94,3 +92,8 @@
                  {}
                  (map vector tbl-keys unmapped-row)))
        rows))
+
+(defn get-data
+  "Returns data as a seq of maps downloaded from url, given query"
+  [url query]
+  (mapify (rest (parse (:body (client/post url {:body query}))))))
