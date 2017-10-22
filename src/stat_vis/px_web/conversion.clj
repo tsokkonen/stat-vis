@@ -7,7 +7,7 @@
 (def query "{
              \"Query\": [
                        {
-                        \"code\": \"NeljÃ¤nnes\",
+                        \"code\": \"Neljännes\",
                         \"selection\": {
                                       \"filter\": \"item\",
                                       \"values\": [
@@ -68,10 +68,11 @@
   [str]
   (Integer. (de-quote str)))
 
-(def conversions {:year str->int :quarter de-quote :home-type de-quote
-                   :number-of-rooms de-quote
-                   :postal-code de-quote :data-item de-quote
-                   :sum-item de-quote :price-per-square-meter str->int})
+(def conversions
+  {:year str->int :quarter de-quote :home-type de-quote
+   :number-of-rooms de-quote :postal-code de-quote
+   :data-item de-quote :sum-item de-quote
+   :price-per-square-meter str->int})
 
 (defn convert
   [tbl-key value]
