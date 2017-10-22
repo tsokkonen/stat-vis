@@ -1,6 +1,5 @@
 (ns stat-vis.core
   (:require [clj-http.client :as client]
-            [clojure.java.browse :as browse]
             [ring.adapter.jetty :as r]
             [stat-vis.px-web.conversion :refer :all]
             [stat-vis.line-chart.svg :refer :all])
@@ -11,7 +10,8 @@
   (str "<style>polyline {fill:none; stroke:#5881d8; stroke-width:3}</style>"
        contents))
 
-(defn handler [request]
+(defn handler
+  [request]
   {:status 200
    :headers {"Content-Type" "text/html"}
    :body (template (xml 600 400))})
